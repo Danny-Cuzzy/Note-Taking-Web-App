@@ -90,7 +90,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 2px solid #f1f1f1;
+    /* border: 2px solid #f1f1f1; */
 }
 .container form textarea:nth-child(1), .container form textarea:nth-child(2) {
     padding: 10px 20px;

@@ -1,59 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
-        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-        <title>Notes</title> 
-    </head>
-    <body>
-
-
-
-        <div class="wrapper">
-            <nav>
-                <h2><img src="./images/quill.png" alt=""> Notes</h2>
-                <div class="notesBtn">
-                    <button value="allNotes"><i class="fi fi-rr-home"></i> All Notes</button>
-                    <button value="archived"><i class="fi fi-rr-folder-download"></i>Archived Notes</button>
-                </div>
-                <hr/>
-            </nav>
-
-
-            <section>
-
-                <header>
-                    <h2>All Notes</h2>
-                    <div class="box">
-                        <div class="search-container">
-                            <i class="fi fi-rr-search"></i>
-                            <input type="search" name="" id="" placeholder="Search by title, content, or tags...">
-                        </div>
-                        <i class="fi fi-rr-settings"></i>
-                    </div>
-                </header>
-
-                <div class="container">
-                    <nav></nav>
-                    <form>
-                        <textarea name="" id="" placeholder="Enter a title..."></textarea>
-                        <textarea name="" id="" placeholder="Start typing..."></textarea>
-                    </form>
-                    <nav>
-                        <div class="notesBtn">
-                            <button value="archived"><i class="fi fi-rr-folder-download"></i>Archive Note</button>
-                            <button value="allNotes"><i class="fi fi-rr-trash"></i>Delete Note</button>
-                        </div>
-                    </nav>
-                </div>
-
-            </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="stylesheet" href="./css/model.css">
+    <title>Notes</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <h2><img src="./images/quill.png" alt="" /> Notes</h2>
+        <div class="notesBtn">
+          <button value="allNotes">
+            <i class="fi fi-rr-home"></i> All Notes
+          </button>
+          <button value="archived">
+            <i class="fi fi-rr-folder-download"></i>Archived Notes
+          </button>
         </div>
+        <hr />
+      </nav>
 
+      <section>
+        <header>
+          <h2>All Notes</h2>
+          <div class="box">
+            <div class="search-container">
+              <i class="fi fi-rr-search"></i>
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search by title, content, or tags..."
+              />
+            </div>
+            <i class="fi fi-rr-settings"></i>
+          </div>
+        </header>
 
+        <div class="container">
+          <nav>
+            <!-- Trigger/Open The Modal to Add Note -->
+            <button
+              style="
+                background-color: blue;
+                padding: 8px;
+                color: azure;
+                font-weight: 800;
+                font-size: 14px;
+              " id="myBtn"
+            >
+              Create a Note
+            </button>
 
-    </body>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <form action="">
+                    <h2>Create a Note</h2>
+                    <div class="form-group">
+                      <label for="title">Title:</label>
+                      <input type="text" id="title" name="title" required />
+                      <button>Create</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+
+          </nav>
+          <form>
+            <textarea name="" id="" placeholder="Enter a title..."></textarea>
+            <textarea name="" id="" placeholder="Start typing..."></textarea>
+          </form>
+          <nav>
+            <div class="notesBtn">
+              <button value="archived">
+                <i class="fi fi-rr-folder-download"></i>Archive Note
+              </button>
+              <button value="allNotes">
+                <i class="fi fi-rr-trash"></i>Delete Note
+              </button>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
+
+<script src="/js/model.js"></script>
