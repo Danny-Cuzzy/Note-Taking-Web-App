@@ -148,7 +148,7 @@ input:checked + .slider:before {
 }
 .darkmode {
     background-color: #0e121a;
-    
+    color: var(--white);
 }
 section main{
     height: 90%; 
@@ -243,8 +243,11 @@ i:hover {
 .sidebar button:hover, .notesAct button:hover {
     background-color: var(--borders);
     border-radius: 5px;
+    font-weight: bold;
+    color: var(--primary-text);
     i {
         color: var(--cta);
+        font-weight: bold;
     }
 }
 note:hover {

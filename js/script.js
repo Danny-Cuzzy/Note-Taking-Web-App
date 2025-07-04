@@ -29,6 +29,44 @@ window.onclick = function(event) {
   };
 };
 
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("darkmode");
+  const isDarkMode = body.classList.contains("darkmode");
+  
+  // var allNotes = document.getElementById("allNotes");
+  // allNotes.classList.toggle("darkmode");
+
+  // var archivedNotes = document.getElementById("archivedNotes");
+  // archivedNotes.classList.toggle("darkmode");
+
+  // var archiveBtn = document.getElementById("archiveBtn");
+  // archiveBtn.classList.toggle("darkmode");
+
+  // var deleteBtn = document.getElementById("deleteBtn");
+  // deleteBtn.classList.toggle("darkmode");
+
+  var modal = document.getElementById("myModal");
+  modal.classList.toggle("darkmode");
+
+  var buttons = document.querySelectorAll("button");
+  buttons.forEach(button => {
+    button.classList.toggle("darkmode");
+  });
+
+  var textareas = document.querySelectorAll("textarea");
+  textareas.forEach(textarea => {
+    textarea.classList.toggle("darkmode");
+  });
+
+  var button = document.querySelectorAll(".buttonList");
+  button.forEach(btn => {
+    btn.classList.toggle("darkmode");
+  });
+
+  // Save dark mode preference to localStorage
+  localStorage.setItem("darkMode", isDarkMode);
+}
 
 // Load notes from localStorage
 function getNotes() {
