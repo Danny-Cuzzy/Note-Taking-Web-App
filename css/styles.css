@@ -225,7 +225,7 @@ main form textarea {
     background-color: inherit;
     font-size: 15px;
     font-weight: bold;
-    color: var(--primary-text);
+    color: var(--cta);
     border: none;
     border-radius: 5px;
     cursor: pointer;
